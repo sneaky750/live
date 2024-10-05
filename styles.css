@@ -108,7 +108,7 @@ p {
     padding: 18px 30px; /* Adds padding inside the button */
     background-color: #ddd; /* Sets the background color of the button */
     border: 1px solid #000000; /* Adds a border to the button */
-    border-radius: 25px; /* Rounds the corners of the button */
+    border-radius: 30px; /* Rounds the corners of the button */
     cursor: pointer; /* Changes the cursor to a pointer when hovered */
     font-size: 16px; /* Sets the font size of the button text */
     color: #9a9696; /* Sets the text color of the button */
