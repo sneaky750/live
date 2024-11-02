@@ -68,7 +68,7 @@ h1 {
     font-size: 36px; /* Sets the font size for the main heading */
     color: #000; /* Sets the text color for the main heading */
     margin-bottom: 30px;
-    font-weight: normal; /* Unbolds the text */
+    font-weight: bold; /* Unbolds the text */
 
 }
 
